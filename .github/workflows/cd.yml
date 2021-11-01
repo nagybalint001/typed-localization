@@ -34,13 +34,13 @@ jobs:
       run: dotnet restore
 
     - name: Pack TypedLocalization.Abstraction
-      run: dotnet pack src/TypedLocalization.Abstraction/TypedLocalization.Abstraction.csproj --no-restore
+      run: dotnet pack src/TypedLocalization.Abstractions/TypedLocalization.Abstractions.csproj --no-restore
 
     - name: Pack TypedLocalization
       run: dotnet pack src/TypedLocalization/TypedLocalization.csproj --no-restore
 
-    - name: Push TypedLocalization.Abstraction
-      run: dotnet nuget push TypedLocalization.Abstraction/**/*.nupkg --api-key ${{ secrets.API_KEY }} --source https://api.nuget.org/v3/index.json
+    - name: Push TypedLocalization.Abstractions
+      run: dotnet nuget push src/TypedLocalization.Abstractions/**/*.nupkg --api-key ${{ secrets.API_KEY }} --source https://api.nuget.org/v3/index.json
 
     - name: Push TypedLocalization
-      run: dotnet nuget push TypedLocalization/**/*.nupkg --api-key ${{ secrets.API_KEY }} --source https://api.nuget.org/v3/index.json
+      run: dotnet nuget push src/TypedLocalization/**/*.nupkg --api-key ${{ secrets.API_KEY }} --source https://api.nuget.org/v3/index.json
