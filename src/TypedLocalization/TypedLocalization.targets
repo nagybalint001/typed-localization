@@ -1,0 +1,17 @@
+﻿<Project>
+
+  <Target Name="_InjectResxToAdditionalFiles"
+          BeforeTargets="PrepareForBuild;CompileDesignTime;GenerateMSBuildEditorConfigFileShouldRun"
+          DependsOnTargets="PrepareResourceNames">
+    <ItemGroup>
+      <ResxFiles Include="@(EmbeddedResource)" Condition="'%(EmbeddedResource.Type)' == 'Resx'" />
+      <AdditionalFiles Include="@(ResxFiles -> '%(FullPath)')" SourceItemType="EmbeddedResource" />
+    </ItemGroup>
+  </Target>
+
+  <ItemGroup>
+    <CompilerVisibleItemMetadata Include="AdditionalFiles" MetadataName="SourceItemType" />
+    <CompilerVisibleItemMetadata Include="AdditionalFiles" MetadataName="ManifestResourceName" />
+  </ItemGroup>
+
+</Project>

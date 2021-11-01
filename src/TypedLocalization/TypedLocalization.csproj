@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Version>$(GITVERSION_MAJORMINORPATCH)</Version>
+    <Authors>Bálint Nagy</Authors>
+    <Description>Strongly-typed service for accessing resx based localization resources.</Description>
+    <Copyright>Copyright (c) 2021 Bálint Nagy</Copyright>
+    <PackageProjectUrl>https://github.com/nagybalint001/typed-localization</PackageProjectUrl>
+    <PackageIcon>resx-icon.png</PackageIcon>
+    <PackageIconUrl />
+    <RepositoryUrl>https://github.com/nagybalint001/typed-localization</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <PackageTags>localization;typed localization;strongly-typed localization;TypedLocalization</PackageTags>
+    <!-- .NET 6 will fix this https://github.com/NuGet/Home/issues/10791  -->
+    <!--<IncludeSymbols>true</IncludeSymbols>-->
+    <!--<SymbolPackageFormat>snupkg</SymbolPackageFormat>-->
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <None Include="../resx-icon.png" Pack="true" PackagePath="\" />
+    <None Include="../../LICENSE" Pack="true" PackagePath="\" />
+    <None Include="../../README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.CSharp" Version="3.11.0" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.CodeAnalysis.Analyzers" Version="3.3.3" PrivateAssets="all" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <!-- Package the generator in the analyzer directory of the nuget package -->
+    <None Include="$(OutputPath)\$(AssemblyName).dll" Pack="true" PackagePath="analyzers/dotnet/cs" Visible="false" />
+
+    <!-- Package the targets file -->
+    <None Include="TypedLocalization.targets" Pack="true" PackagePath="build" Visible="false" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\TypedLocalization.Abstractions\TypedLocalization.Abstractions.csproj" />
+  </ItemGroup>
+
+</Project>
