@@ -15,6 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.github\workflows\cd.yml = .github\workflows\cd.yml
 		.github\workflows\ci.yml = .github\workflows\ci.yml
 		Directory.Build.props = Directory.Build.props
+		src\TypedLocalization\TypedLocalization.targets = src\TypedLocalization\TypedLocalization.targets
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TypedLocalization.Abstractions", "src\TypedLocalization.Abstractions\TypedLocalization.Abstractions.csproj", "{4899475D-3A86-4DDA-A830-AE6E31C5DCF0}"
@@ -31,7 +32,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{
 		.github\workflows\ci.yml = .github\workflows\ci.yml
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TypedLocalization.Samples.Maui", "TypedLocalization.Samples.Maui\TypedLocalization.Samples.Maui.csproj", "{63DE8AE7-2C33-43D0-A42A-E7708F582834}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TypedLocalization.Samples.Maui", "src\TypedLocalization.Samples.Maui\TypedLocalization.Samples.Maui.csproj", "{63DE8AE7-2C33-43D0-A42A-E7708F582834}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
