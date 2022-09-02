@@ -1,7 +1,7 @@
 ﻿<Project>
 
   <Target Name="_InjectResxToAdditionalFiles"
-          BeforeTargets="PrepareForBuild;CompileDesignTime;GenerateMSBuildEditorConfigFileShouldRun"
+          BeforeTargets="CompileDesignTime;GenerateMSBuildEditorConfigFileShouldRun"
           DependsOnTargets="PrepareResourceNames">
     <ItemGroup>
       <ResxFiles Include="@(EmbeddedResource)" Condition="'%(EmbeddedResource.Type)' == 'Resx'" />
