@@ -15,6 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.github\workflows\cd.yml = .github\workflows\cd.yml
 		.github\workflows\ci.yml = .github\workflows\ci.yml
 		Directory.Build.props = Directory.Build.props
+		src\TypedLocalization\TypedLocalization.targets = src\TypedLocalization\TypedLocalization.targets
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TypedLocalization.Abstractions", "src\TypedLocalization.Abstractions\TypedLocalization.Abstractions.csproj", "{4899475D-3A86-4DDA-A830-AE6E31C5DCF0}"
@@ -30,6 +31,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{
 		.github\workflows\cd.yml = .github\workflows\cd.yml
 		.github\workflows\ci.yml = .github\workflows\ci.yml
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TypedLocalization.Samples.Maui", "src\TypedLocalization.Samples.Maui\TypedLocalization.Samples.Maui.csproj", "{63DE8AE7-2C33-43D0-A42A-E7708F582834}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +52,12 @@ Global
 		{4899475D-3A86-4DDA-A830-AE6E31C5DCF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4899475D-3A86-4DDA-A830-AE6E31C5DCF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4899475D-3A86-4DDA-A830-AE6E31C5DCF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63DE8AE7-2C33-43D0-A42A-E7708F582834}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63DE8AE7-2C33-43D0-A42A-E7708F582834}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63DE8AE7-2C33-43D0-A42A-E7708F582834}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{63DE8AE7-2C33-43D0-A42A-E7708F582834}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63DE8AE7-2C33-43D0-A42A-E7708F582834}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63DE8AE7-2C33-43D0-A42A-E7708F582834}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +68,7 @@ Global
 		{4899475D-3A86-4DDA-A830-AE6E31C5DCF0} = {67980B66-481C-4CDB-9351-03230A9383D3}
 		{385FF5D9-19CA-46DA-AF61-06B6A97C723D} = {81022493-3A6D-4083-B3ED-CEB83A747BF6}
 		{9CAC9F7A-6C7C-4CD0-94A6-D72283FD68F1} = {385FF5D9-19CA-46DA-AF61-06B6A97C723D}
+		{63DE8AE7-2C33-43D0-A42A-E7708F582834} = {67980B66-481C-4CDB-9351-03230A9383D3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {806E88B4-4EE4-415A-A17B-9279DD1EBF5F}

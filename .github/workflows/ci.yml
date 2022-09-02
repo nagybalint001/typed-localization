@@ -17,6 +17,10 @@ jobs:
       with:
         dotnet-version: 6.0.x
 
+    - name: Remove MAUI sample from sln
+      run: |
+        dotnet sln TypedLocalization.sln remove src/TypedLocalization.Samples.Maui/TypedLocalization.Samples.Maui.csproj
+
     - name: Restore dependencies
       run: dotnet restore
 
