@@ -30,6 +30,10 @@ jobs:
         useConfigFile: true
         configFilePath: .github/GitVersion.yml
 
+    - name: Remove MAUI sample from sln
+      run: |
+        dotnet sln TypedLocalization.sln remove src/TypedLocalization.Samples.Maui/TypedLocalization.Samples.Maui.csproj
+
     - name: Restore dependencies
       run: dotnet restore
 
