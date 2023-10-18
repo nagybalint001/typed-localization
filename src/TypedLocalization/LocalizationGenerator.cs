@@ -85,7 +85,7 @@ namespace {nameSpace}
             {
                 sb.Append($@"
         /// <summary>
-        /// {entry.Value.Replace(System.Environment.NewLine, " ")}
+        /// {entry.Value.Replace("\n", " ")}
         /// </summary>");
                 foreach (var param in entry.Parameters)
                 {
@@ -123,7 +123,7 @@ namespace {nameSpace}
             {
                 sb.Append($@"
         /// <summary>
-        /// {entry.Value.Replace(System.Environment.NewLine, " ")}
+        /// {entry.Value.Replace("\n", " ")}
         /// </summary>");
                 foreach (var param in entry.Parameters)
                 {
