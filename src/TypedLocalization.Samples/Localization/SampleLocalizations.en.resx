@@ -120,6 +120,11 @@
   <data name="Test1" xml:space="preserve">
     <value>Test</value>
   </data>
+  <data name="TestMultiline" xml:space="preserve">
+    <value>Test
+Multiline
+    </value>
+  </data>
   <data name="Test2" xml:space="preserve">
     <value>Test {alma} {asd}</value>
     <comment>{apple|int}{asd}</comment>
